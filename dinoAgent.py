@@ -12,7 +12,7 @@ from keras.optimizers import Adam
 def preprocess(observation):
     """
     Reshape and resize the observation vector before processing it.
-    :param observation: observations from the gym env
+    :param observation: observations from the gym envs
     :return: A smaller and reshaped vector (keras friendly)
     """
     observation = observation.reshape((150, 600, 3))

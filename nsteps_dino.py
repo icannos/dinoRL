@@ -20,6 +20,7 @@ def train(path, episodes=100, init_model=None, exploration_max=1,
     import gym
     import gym_chrome_dino
 
+
     env = gym.make('ChromeDino-v0')
 
     dino = DinoKStepQLearner(2, input_shape=(30, 200, 4),
@@ -33,6 +34,8 @@ def train(path, episodes=100, init_model=None, exploration_max=1,
 
     if init_model:
         dino.load(init_model)
+
+    env.unwrapped.game.set_acceleration(0.005)
 
     best_score = 0
 
