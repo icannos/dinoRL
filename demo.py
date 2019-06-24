@@ -26,6 +26,8 @@ if __name__ == "__main__":
     import gym_chrome_dino
 
     env = gym.make('ChromeDino-v0')
+    envHuman = gym.make('ChromeDino-v0')
+    envHuman.reset()
 
     while True:
         observation = env.reset()
@@ -35,7 +37,6 @@ if __name__ == "__main__":
         state = np.stack([observation, observation, observation, observation], axis=2).reshape([1, 30, 200, 4])
 
         while not done:
-
             Q = model.predict(state)[0]
             action = np.argmax(Q)
             observation, reward, done, info = env.step(action)
