@@ -1,0 +1,7 @@
+opencv-python
+keras
+tensorflow==1.13.1
+pillow
+selenium
+gym
+chromium

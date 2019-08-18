@@ -35,7 +35,7 @@ def train(path, episodes=100, init_model=None, exploration_max=1,
     if init_model:
         dino.load(init_model)
 
-    env.unwrapped.game.set_acceleration(0.001)
+    env.unwrapped.game.set_acceleration(0)
 
     best_score = 0
 
