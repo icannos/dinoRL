@@ -4,6 +4,8 @@
 
 ## Requirements
 
+It uses a slightly updated version of `https://github.com/elvisyjlin/gym-chrome-dino` which is provided alonside de code.
+
 ```
 Opencv cv2
 Keras
